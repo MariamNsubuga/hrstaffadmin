@@ -1,0 +1,55 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa; /* Light background */
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Dashboard Card Styles */
+.card {
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff; /* Header background */
+    color: white; /* Header text color */
+    font-weight: bold; /* Make header text bold */
+}
+
+.card-body {
+    text-align: center; /* Center align text in card body */
+}
+
+/* Table Styles */
+.table {
+    margin-top: 20px; /* Add space above table */
+    background-color: white; /* Table background */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #007bff; /* Header background color */
+    color: white; /* Header text color */
+    text-align: center; /* Center align table headers */
+}
+
+.table td {
+    text-align: center; /* Center align table data */
+}
+
+/* Pagination Styles */
+.pagination {
+    justify-content: center; /* Center align pagination */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px; /* Add spacing between cards on small screens */
+    }
+}

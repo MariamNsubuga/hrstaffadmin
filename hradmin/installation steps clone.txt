@@ -1,0 +1,13 @@
+installation steps
+clone the repo
+install the localhost mail https://github.com/mailhog/MailHog/releases
+run composer install
+change the .env.example to .env
+run php artisan key:generate
+configure .env
+setup the database (database)
+php artisan  serve
+
+this repo works in handle with the hrstaffclient
+
+for production you have to change the mail details of .env
