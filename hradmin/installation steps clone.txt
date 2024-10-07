@@ -7,7 +7,10 @@ run php artisan key:generate
 configure .env
 setup the database (database)
 php artisan  serve
+npm run dev(in the other teminal)
 
 this repo works in handle with the hrstaffclient
 
 for production you have to change the mail details of .env
+
+the database is in app/database

@@ -45,11 +45,7 @@ class AdminController extends Controller
         ]);
     }
 
-    // Admin dashboard view
-    // public function dashboard()
-    // {
-    //     return view('admin.dashboard'); 
-    // }
+   
     public function dashboard()
     {
         $staffCount = Member::count(); // Get the total number of staff members
@@ -79,7 +75,13 @@ class AdminController extends Controller
          $admin->email = $request->email;
          $admin->password = Hash::make($request->password);
          $admin->save();
- 
+         
+         $audit = new Audit();
+         $loggedInAdmin = auth()->guard('admin')->user(); // Retrieve the currently logged-in admin
+         $audit->action = $loggedInAdmin->name . ' created new admin ' . $admin->name;
+         $audit->created_at = now();
+         $audit->save();
+
          return redirect()->route('admin.dashboard')->with('success', 'Admin added successfully.');
      }
 }

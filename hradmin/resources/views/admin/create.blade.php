@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container mt-5">
+    <div class="mb-3">
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
+    </div>
     <h1>Add New Admin</h1>
-    
+
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

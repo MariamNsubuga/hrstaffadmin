@@ -4,9 +4,8 @@
 <div class="container">
     <h1>Audit Logs</h1>
     
-    <!-- Add a button or link to navigate back to the Dashboard -->
     <div class="mb-3">
-        <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+        <a href="{{ route('admin.dashboard') }}" class="btn btn-primary">Back to Dashboard</a>
     </div>
     
     <table class="table">
@@ -21,7 +20,7 @@
         <tbody>
             @foreach ($audits as $audit)
                 <tr>
-                    <td>{{ $audit->id }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $audit->action }}</td>
                     {{-- <td>{{ $audit->employee_number }}</td> --}}
                     <td>{{ $audit->created_at }}</td>
